@@ -1,0 +1,129 @@
+#@title
+#nadefinování barev pro texty příklad print(color.BLUE + "ahoj" + color.END)
+class color:
+   PURPLE = '\033[1;35;48m'
+   CYAN = '\033[1;36;48m'
+   BOLD = '\033[1;37;48m'
+   BLUE = '\033[1;34;48m'
+   GREEN = '\033[1;32;48m'
+   YELLOW = '\033[1;33;48m'
+   RED = '\033[1;31;48m'
+   BLACK = '\033[1;30;48m'
+   UNDERLINE = '\033[4;37;48m'
+   END = '\033[1;37;0m'
+
+#import mazání výstupní obrazovky
+from IPython.core.display import clear_output
+clear_output,
+
+#import modulu zalamování textu
+import textwrap
+
+#import modulu, který uspí program než smaže obrazovku
+from time import sleep
+
+#přednastavení variabilních hodnot, jinak to má po prvním spuštění problém se spustit
+name1p = ""
+name5p = ""
+
+#funkce zalamování textu podle zadaného parametru a po slovech
+def zalom_text(y, c):
+  with open(r"/content/texty.txt", 'r') as fp:  #načtení souboru
+    x = fp.readlines()[y-1]                     #čtení řádku podle hodnoty y v zadání funkce zalom text
+
+  string = x                                    #překlopení načteného textu pro použití vložených variabilních proměných
+  string = string.format(name1p = name1p, name5p = name5p)
+  
+  wrapper = textwrap.TextWrapper(width=40)      #zalomení s parametrem šířky pole 40 znaků
+  word_list = wrapper.wrap(text = string) 
+
+#výběr barvy textu
+  if c == "PURPLE":
+    c = color.PURPLE
+  elif c == "CYAN":
+    c = color.CYAN
+  elif c == "BOLD":
+    c = color.BOLD
+  elif c == "BLUE":
+    c = color.BLUE
+  elif c == "GREEN":
+    c = color.GREEN
+  elif c == "YELLOW":
+    c = color.YELLOW
+  elif c == "RED":
+    c = color.RED
+  elif c == "BLACK":
+    c = color.BLACK
+  elif c == "UNDERLINE":
+    c = color.UNDERLINE
+  elif c == "END":
+    c = color.END
+  else:
+    c = color.END
+
+#tisk po slovech
+  for element in word_list:
+    print(c + element + color.END)
+
+#funkce pokynu pro stisknutí ENTER s mezerou nad a pod konzolí
+def enter ():
+  e="STISKNI ENTER "
+  print()
+  input (e)
+  print()
+  sleep (1)
+  clear_output()
+
+#**********KOD HRY*********
+
+zalom_text(1, "BLUE")
+enter()
+
+zalom_text(2, "BLUE")
+enter()
+
+zalom_text(3, "BLUE")
+enter()
+
+zalom_text(4, "BLUE")
+enter()
+
+print(color.GREEN + "Zjištěn neznámý člen posádky.")
+print("Uveď své jméno." + color.END
+      )
+name1p = input()
+sleep (1)
+clear_output()
+
+while name1p == "":
+  print(color.RED + "Hodnota nezadána. Uveď své jméno!" + color.END)
+  name1p = input()
+print()
+sleep (1)
+clear_output()
+
+print(color.GREEN + "Takže",name1p+".","A jak tě mám oslovovat?" + color.END)
+name5p = input()
+sleep (1)
+clear_output()
+
+while name5p == "":
+  print(color.RED + "Hodnota nezadána.")
+  print("S ohledem na jazyk systému je nutné znát 5. pád tvého jména.")
+  print("Uveď, jak tě mám oslovovat!" + color.END)
+  name5p = input()
+print()
+sleep (1)
+clear_output()
+
+print(color.GREEN + name1p+",", name5p+",", "Hodnoty uloženy." + color.END)
+enter ()
+
+zalom_text (5, "BLUE")
+enter()
+
+zalom_text (6, "BLUE")
+enter()
+
+
+print("KONEC - zatím")

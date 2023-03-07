@@ -1,0 +1,6 @@
+Již několik let putuješ vesmírem a konec tvé mise je v nedohlednu. Zrovna jsi se probudil z kryospánku, abys provedl pravidelnou kontrolu lodě a systémů. Už ani nepočítáš po kolikáte to je.
+Je to pro tebe už rutinní záležitost. Projít celou loď. Zkontrolovat stav trupu a bezpečnostních přepážek. Zkontrolovat stav zásob a recyklačních jednotek. Připravit si přesně vyměřenou porci jídla. A zkontrolovat trasu letu.
+Při tom posledním jsi se ale zarazil. Něco je špatně. Zdá se, že navigační systém selhal. Palubní počitač začal hlásit blížící se kolizi a po zprůhlednění čelního průzoru jsi viděl rychle se blížící planetu. Srážka je nevynutelná. Poslední co jsi stihnul bylo zavřít průzor a rychle se schovat do bezpečnostního modulu. Zbytek je na autopilotovi.
+Byl to tvrdý náraz doprovázený hlasitými zvuky kroutících se plechů a řínčení všeho co nebylo dostatečně pevně ukotveno. Kupodivu se ti ale podařilo vyváznout bez výžnějších zranění. Zkusil jsi palubní počítač. Zjevně utrpěl při nárazu nějaké poškození. Zdá se ti trochu zmatený.
+Po té, co palubní počítač uložil data, která měl už dávno znát, se za hlasitého zasyčení unikajícího vzduchu otevřely přetlakové dveře kabiny. Z leknutí a šoku tě postupně dostal fakt, že ses nezačal dusit. 
+{name5p} atmosféra je dýchatelná. Otvírám hlavní dveře.
